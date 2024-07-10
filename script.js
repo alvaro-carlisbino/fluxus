@@ -1,96 +1,18 @@
-const cols = 3;
-const sliderWrapper = document.getElementById('sliderWrapper');
-let parts = [];
-let images = ['./image.png', './image2.png'];
-let current = 0;
+let currentSlide = 1;
+const totalSlides = 2;
+let slideTimeout;
 
-// Add images to the HTML-markup
-for (let col = 0; col < cols; col++) {
-	let part = document.createElement('div');
-	part.className = 'part';
+window.addEventListener("wheel", (event) => {
+  if (slideTimeout) {
+    clearTimeout(slideTimeout);
+  }
 
-	let section = document.createElement('div');
-	section.className = 'section';
-
-	let img = document.createElement('img');
-	img.src = images[current];
-
-	section.appendChild(img);
-	part.appendChild(section);
-	sliderWrapper.appendChild(part);
-
-	part.style.setProperty('--x', (-100 / cols) * col + 'vw');
-
-	parts.push(part);
-}
-
-let playing = false;
-
-// Slide handler
-const slide = (dir) => {
-	if (!playing) {
-		playing = true;
-		
-		if (current + dir < 0) {
-			current = images.length - 1;
-		} else if (current + dir >= images.length) {
-			current = 0;
-		} else {
-			current += dir;
-		}
-
-		const up = (part, next) => {
-			part.appendChild(next);
-			anime({
-				targets: part,
-				duration: 2500,
-				easing: 'easeInOutQuart',
-				translateY: [0, -window.innerHeight],
-				complete: () => {
-					part.removeChild(part.childNodes[0]);
-					playing = false;
-					part.style.transform = 'translateY(0)';
-				},
-			});
-		};
-
-		const down = (part, next) => {
-			part.insertBefore(next, part.firstChild);
-			anime({
-				targets: part,
-				duration: 2500,
-				easing: 'easeInOutQuart',
-				translateY: [-window.innerHeight, 0],
-				complete: () => {
-					part.removeChild(part.childNodes[1]);
-					playing = false;
-				},
-			});
-		};
-
-		for (let p in parts) {
-			let part = parts[p];
-			let next = document.createElement('div');
-			next.className = 'section';
-
-			let img = document.createElement('img');
-			img.src = images[current];
-
-			next.appendChild(img);
-
-			if ((p - Math.max(0, dir)) % 2 === 0) {
-				down(part, next);
-			} else {
-				up(part, next);
-			}
-		}
-	}
-};
-
-document.addEventListener('wheel', function(event) {
-	if (event.deltaY < 0) {
-		slide(-1);
-	} else {
-		slide(1);
-	}
+  slideTimeout = setTimeout(() => {
+    if (event.deltaY > 0) {
+      currentSlide = (currentSlide % totalSlides) + 1;
+    } else {
+      currentSlide = ((currentSlide - 2 + totalSlides) % totalSlides) + 1;
+    }
+    document.getElementById("slider" + currentSlide).checked = true;
+  }, 200); // Timeout de 200ms para debouncing
 });

@@ -4,46 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fluxus</title>
-
     <link href="./style.css" rel="stylesheet" />
   </head>
   <body>
-    <div id="sliderWrapper">
-      <h1 id="segue">Segue</h1>
-      <h1 id="o">o</h1>
-      <h1 id="fluxo">Fluxo</h1>
-      <div class="buttons">
-        <button class="next" onclick="slide(-1)">
-          <svg
-            width="24"
-            height="24"
-            src="http://www.w3.org/2000/svg"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-          >
-            <path
-              d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"
-            />
-          </svg>
-        </button>
-        <button class="prev" onclick="slide(1)">
-          <svg
-            width="24"
-            height="24"
-            xmlns="http://www.w3.org/2000/svg"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-          >
-            <path
-              d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"
-            />
-          </svg>
-        </button>
+    <div class="slide-wrapper">
+      <input type="radio" name="slider" id="slider1" checked />
+      <label for="slider1"></label>
+      <div class="slide slide1"></div>
+
+      <input type="radio" name="slider" id="slider2" />
+      <label for="slider2"></label>
+      <div class="slide slide2"></div>
+
+      <div class="text-container">
+        <span class="segue">Segue</span>
+        <span class="o">o</span>
+        <span class="fluxo">Fluxo</span>
       </div>
     </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.1.0/anime.min.js"></script>
-
     <script src="./script.js"></script>
   </body>
 </html>
