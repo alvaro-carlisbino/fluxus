@@ -17,14 +17,25 @@ body {
 }
 #sliderWrapper h1 {
   position: absolute;
-  top: 50%;
-  left: 50%;
   z-index: 100;
   color: white;
   font-size: 3rem;
   margin: 0;
+}
+#sliderWrapper #segue {
+  top: 40px;
+  left: 40px;
   transform: translate(-50%, -50%);
-  mix-blend-mode: overlay;
+}
+#sliderWrapper #o {
+  top: 40px;
+  right: 40px;
+  transform: translate(50%, -50%);
+}
+#sliderWrapper #fluxo {
+  bottom: 40px;
+  right: 40px;
+  transform: translate(50%, 50%);
 }
 #sliderWrapper .buttons {
   position: absolute;
