@@ -86,3 +86,13 @@ const slide = (dir) => {
 		}
 	}
 };
+
+document.addEventListener('wheel', function(event) {
+	if (event.deltaY < 0) {
+		// Rolagem para cima
+		slide(-1);
+	} else {
+		// Rolagem para baixo
+		slide(1);
+	}
+});
