@@ -1,18 +1,36 @@
-let currentSlide = 1;
-const totalSlides = 2;
-let slideTimeout;
+let lastScrollTime = 0;
+let lastScrollY = 0;
 
-window.addEventListener("wheel", (event) => {
-  if (slideTimeout) {
-    clearTimeout(slideTimeout);
+document.addEventListener("wheel", function (event) {
+  const currentTime = new Date().getTime();
+  const deltaY = event.deltaY;
+  const deltaTime = currentTime - lastScrollTime;
+
+  let speed = Math.abs(deltaY) / deltaTime;
+
+  const minDuration = 0.2;
+  const maxDuration = 1.0;
+
+  let transitionDuration = Math.max(minDuration, maxDuration - speed * 0.8);
+  transitionDuration = Math.min(maxDuration, transitionDuration);
+
+  let carouselItems = document.querySelectorAll(".carousel-item");
+  carouselItems.forEach((item) => {
+    item.style.transitionDuration = `${transitionDuration}s`;
+  });
+
+  var carousel = document.querySelector("#carouselExampleCaptions");
+  var carouselInstance = bootstrap.Carousel.getInstance(carousel);
+  if (!carouselInstance) {
+    carouselInstance = new bootstrap.Carousel(carousel);
   }
 
-  slideTimeout = setTimeout(() => {
-    if (event.deltaY > 0) {
-      currentSlide = (currentSlide % totalSlides) + 1;
-    } else {
-      currentSlide = ((currentSlide - 2 + totalSlides) % totalSlides) + 1;
-    }
-    document.getElementById("slider" + currentSlide).checked = true;
-  }, 200); // Timeout de 200ms para debouncing
+  if (deltaY < 0) {
+    carouselInstance.prev();
+  } else {
+    carouselInstance.next();
+  }
+
+  lastScrollTime = currentTime;
+  lastScrollY = window.scrollY;
 });
