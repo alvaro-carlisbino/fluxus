@@ -92,6 +92,7 @@ function applyHoverEffects(id) {
 
   element.addEventListener("mouseenter", () => {
     img.style = `
+      
       transition: all 0.3s;
       width: 358px;
       height: 738px;
@@ -100,6 +101,8 @@ function applyHoverEffects(id) {
       margin-left: -25px;
       border: 2px solid #8a2be2;
     `;
+    img.src = `${id}_cor.png`;
+
     text.style = `
       transition: all 0.3s;
       color: #fa0444;
@@ -108,9 +111,8 @@ function applyHoverEffects(id) {
     `;
     if (id === "lol") {
       text.style.left = "20%";
-    } else if(id == "hok"){
+    } else if (id == "hok") {
       text.style.left = "25%";
-      
     }
     svg.style.display = "block";
   });
@@ -124,6 +126,8 @@ function applyHoverEffects(id) {
       margin-left: 0px;
       border: none;
     `;
+    img.src = `${id}.png`;
+
     text.style = `
       transition: all 0.3s;
       color: #fff;
@@ -132,9 +136,8 @@ function applyHoverEffects(id) {
     `;
     if (id === "lol") {
       text.style.left = "35%";
-    } else if(id == "hok"){
+    } else if (id == "hok") {
       text.style.left = "40%";
-      
     }
     svg.style.display = "none";
   });
@@ -148,7 +151,7 @@ function createSVG(id) {
   svg.setAttribute("viewBox", "0 0 39 39");
   svg.style.position = "absolute";
   svg.style.top = "20px";
-  svg.style.right = "10px";
+  svg.style.right = "5px";
   svg.style.display = "none";
 
   const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
