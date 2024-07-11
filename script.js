@@ -34,3 +34,52 @@ document.addEventListener("wheel", function (event) {
   lastScrollTime = currentTime;
   lastScrollY = window.scrollY;
 });
+
+document.getElementById("roxo").addEventListener("mouseenter", (_) => {
+  document.getElementById("roxo").style.fill = "#5d02e0";
+  document.getElementById("roxo").style.color = "#5d02e0";
+});
+
+document.getElementById("roxo").addEventListener("mouseleave", (_) => {
+  document.getElementById("roxo").style.fill = "rgba(255, 255, 255, 0.8)";
+  document.getElementById("roxo").style.color = "rgba(255, 255, 255, 0.8)";
+});
+
+const scrollers = document.querySelectorAll(".scroller");
+
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  addAnimation();
+}
+
+function addAnimation() {
+  scrollers.forEach((scroller) => {
+    scroller.setAttribute("data-animated", true);
+
+    const scrollerInner = scroller.querySelector(".scroller__inner");
+    const scrollerContent = Array.from(scrollerInner.children);
+    const initialContentLength = scrollerContent.length;
+
+    // Cloning the items to create a continuous loop
+    scrollerContent.slice(0, initialContentLength).forEach((item) => {
+      const duplicatedItem = item.cloneNode(true);
+      duplicatedItem.setAttribute("aria-hidden", true);
+      scrollerInner.appendChild(duplicatedItem);
+    });
+
+    // Animation direction based on data-direction attribute
+    const direction = scroller.getAttribute("data-direction");
+    if (direction === "right") {
+      scroller.style.setProperty("--_animation-direction", "reverse");
+    } else {
+      scroller.style.setProperty("--_animation-direction", "forwards");
+    }
+
+    // Animation speed based on data-speed attribute
+    const speed = scroller.getAttribute("data-speed");
+    if (speed === "slow") {
+      scroller.style.setProperty("--_animation-duration", "60s");
+    } else {
+      scroller.style.setProperty("--_animation-duration", "20s");
+    }
+  });
+}
