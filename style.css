@@ -3,6 +3,43 @@
   object-fit: cover;
 }
 
+.top-right {
+  position: absolute;
+  top: 10%;
+  right: 15%;
+  z-index: 10;
+  color: white;
+  font-size: 3em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.top-left {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  z-index: 10;
+  color: white;
+  font-size: 3em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.bottom-right {
+  position: absolute;
+  bottom: 10%;
+  right: 15%;
+  z-index: 10;
+  color: white;
+  font-size: 3em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.seta-fdp {
+  margin-left: 15px;
+  width: 94px;
+  height: 94px;
+  fill: white;
+  transition: fill 0.3s;
+}
+.seta-fdp:hover {
+  fill: #5d02e0;
+}
 .carousel-item {
   transition: transform 1s ease;
 }
