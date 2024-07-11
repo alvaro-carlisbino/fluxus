@@ -166,3 +166,43 @@ function createSVG(id) {
 
 const ids = ["r6", "cs", "ff", "lol", "hok"];
 ids.forEach(applyHoverEffects);
+
+gsap.registerPlugin(ScrollTrigger);
+document.addEventListener("DOMContentLoaded", (event) => {
+  const cards = [
+    { id: "#mlks-1", endTranslateX: 0, rotate: 45 },
+    { id: "#mlks-2", endTranslateX: -100, rotate: -30 },
+    { id: "#mlks-3", endTranslateX: -50, rotate: 45 },
+  ];
+  ScrollTrigger.create({
+    trigger: ".fenosmlks",
+    start: "top top",
+    end: "+=1000vh",
+    scrub: 1,
+    pin: true,
+    onUpdate: (self) => {
+      gsap.to(".fenosmlks", {
+        x: `${-350 * self.progress}vw`,
+        duration: 0.5,
+        ease: "power3.out",
+      });
+    },
+  });
+
+  cards.forEach((card) => {
+    ScrollTrigger.create({
+      trigger: "card.id",
+      start: "+=1700vh",
+      end: "+=1700vh",
+      scrub: 1,
+      onUpdate: (self) => {
+        gsap.to(card.id, {
+          x: `${card.endTranslateX * self.progress}px`,
+          rotate: `${card.rotate * self.progress * 2}`,
+          duration: 0.5,
+          ease: "power3.out",
+        });
+      },
+    });
+  });
+});
