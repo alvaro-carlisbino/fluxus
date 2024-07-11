@@ -83,3 +83,83 @@ function addAnimation() {
     }
   });
 }
+
+function applyHoverEffects(id) {
+  const element = document.getElementById(id);
+  const img = document.getElementById(`${id}img`);
+  const text = document.getElementById(`${id}text`);
+  const svg = createSVG(id);
+
+  element.addEventListener("mouseenter", () => {
+    img.style = `
+      transition: all 0.3s;
+      width: 358px;
+      height: 738px;
+      object-fit: cover;
+      color: #fa0444;
+      margin-left: -25px;
+      border: 2px solid #8a2be2;
+    `;
+    text.style = `
+      transition: all 0.3s;
+      color: #fa0444;
+      left:15%;
+
+    `;
+    if (id === "lol") {
+      text.style.left = "20%";
+    } else if(id == "hok"){
+      text.style.left = "25%";
+      
+    }
+    svg.style.display = "block";
+  });
+
+  element.addEventListener("mouseleave", () => {
+    img.style = `
+      width: 250px;
+      height: 738px;
+      object-fit: cover;
+      transition: all 0.3s;
+      margin-left: 0px;
+      border: none;
+    `;
+    text.style = `
+      transition: all 0.3s;
+      color: #fff;
+      left:25%;
+
+    `;
+    if (id === "lol") {
+      text.style.left = "35%";
+    } else if(id == "hok"){
+      text.style.left = "40%";
+      
+    }
+    svg.style.display = "none";
+  });
+}
+
+function createSVG(id) {
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+  svg.setAttribute("width", "50");
+  svg.setAttribute("height", "50");
+  svg.setAttribute("viewBox", "0 0 39 39");
+  svg.style.position = "absolute";
+  svg.style.top = "20px";
+  svg.style.right = "10px";
+  svg.style.display = "none";
+
+  const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+  path.setAttribute("d", "M3 0V6H28.77L0 34.77L4.23 39L33 10.23V36H39V0H3Z");
+  path.setAttribute("fill", "#5D02E0");
+
+  svg.appendChild(path);
+  document.getElementById(id).appendChild(svg);
+
+  return svg;
+}
+
+const ids = ["r6", "cs", "ff", "lol", "hok"];
+ids.forEach(applyHoverEffects);

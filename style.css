@@ -101,8 +101,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -116,7 +115,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #000000;
+  background: #5d02e0;
 }
 
 .roxo {
@@ -127,6 +126,15 @@ body {
 .roxo:hover {
   color: #5d02e0;
   fill: #5d02e0;
+}
+
+.seglinpart {
+  background-color: #000000;
+  color: rgba(255, 255, 255, 0.8);
+}
+.seglinpart:hover {
+  background-color: #d9d9d9;
+  color: #5d02e0;
 }
 
 .scroller__inner {
@@ -173,4 +181,65 @@ body {
 .tag-list li {
   padding: 1rem;
   border-radius: 0.5rem;
+}
+
+.lines {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #000000;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.lines-text {
+  font-family: Montserrat;
+
+  font-size: 45px;
+  margin-top: 100px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.image-container {
+  width: 307px;
+  height: 738px;
+  margin: 0 20px;
+  position: relative;
+}
+
+.image {
+  width: 250px;
+  height: 738px;
+  object-fit: cover;
+  transition: all 0.6s;
+}
+
+.text {
+  color: #fff;
+  position: absolute;
+  bottom: -30px;
+  left: 30%;
+  transform: translateX(-50%);
+  font-size: 150px;
+  font-weight: bold;
+  font-family: "League Gothic", sans-serif;
+}
+
+.baixo {
+  margin-top: 150px;
+}
+
+.image-container-active {
+  transition: all 0.6s;
+  width: 358px;
+  height: 738px;
+  object-fit: cover;
+  color: #fa0444;
 }
