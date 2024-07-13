@@ -101,7 +101,7 @@ function applyHoverEffects(id) {
       margin-left: -25px;
       border: 2px solid #8a2be2;
     `;
-    img.src = `${id}_cor.png`;
+    img.src = `assets/${id}_cor.png`;
 
     text.style = `
       transition: all 0.3s;
@@ -126,7 +126,7 @@ function applyHoverEffects(id) {
       margin-left: 0px;
       border: none;
     `;
-    img.src = `${id}.png`;
+    img.src = `assets/${id}.png`;
 
     text.style = `
       transition: all 0.3s;
