@@ -27,16 +27,6 @@ document.addEventListener("wheel", function (event) {
   lastScrollTime = currentTime;
 });
 
-document.getElementById("roxo").addEventListener("mouseenter", () => {
-  document.getElementById("roxo").style.fill = "#5d02e0";
-  document.getElementById("roxo").style.color = "#5d02e0";
-});
-
-document.getElementById("roxo").addEventListener("mouseleave", () => {
-  document.getElementById("roxo").style.fill = "rgba(255, 255, 255, 0.8)";
-  document.getElementById("roxo").style.color = "rgba(255, 255, 255, 0.8)";
-});
-
 const scrollers = document.querySelectorAll(".scroller");
 
 if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
