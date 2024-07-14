@@ -291,6 +291,13 @@ body {
 }
 
 .word-spacing {
-  letter-spacing: 30px;
   white-space: nowrap;
+}
+
+#gif_fluxo {
+  width: 690px;
+  height: 620px;
+  border-left: 1px white solid;
+  border-right: 1px white solid;
+  border-bottom: 1px white solid;
 }
