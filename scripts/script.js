@@ -1,46 +1,38 @@
 let lastScrollTime = 0;
-let lastScrollY = 0;
 
 document.addEventListener("wheel", function (event) {
-  const currentTime = new Date().getTime();
+  const currentTime = Date.now();
   const deltaY = event.deltaY;
   const deltaTime = currentTime - lastScrollTime;
-
-  let speed = Math.abs(deltaY) / deltaTime;
+  const speed = Math.abs(deltaY) / deltaTime;
 
   const minDuration = 0.2;
   const maxDuration = 1.0;
+  const transitionDuration = Math.min(
+    maxDuration,
+    Math.max(minDuration, maxDuration - speed * 0.8)
+  );
 
-  let transitionDuration = Math.max(minDuration, maxDuration - speed * 0.8);
-  transitionDuration = Math.min(maxDuration, transitionDuration);
-
-  let carouselItems = document.querySelectorAll(".carousel-item");
-  carouselItems.forEach((item) => {
+  document.querySelectorAll(".carousel-item").forEach((item) => {
     item.style.transitionDuration = `${transitionDuration}s`;
   });
 
-  var carousel = document.querySelector("#carouselExampleCaptions");
-  var carouselInstance = bootstrap.Carousel.getInstance(carousel);
-  if (!carouselInstance) {
-    carouselInstance = new bootstrap.Carousel(carousel);
-  }
+  const carousel = document.querySelector("#carouselExampleCaptions");
+  let carouselInstance =
+    bootstrap.Carousel.getInstance(carousel) ||
+    new bootstrap.Carousel(carousel);
 
-  if (deltaY < 0) {
-    carouselInstance.prev();
-  } else {
-    carouselInstance.next();
-  }
+  deltaY < 0 ? carouselInstance.prev() : carouselInstance.next();
 
   lastScrollTime = currentTime;
-  lastScrollY = window.scrollY;
 });
 
-document.getElementById("roxo").addEventListener("mouseenter", (_) => {
+document.getElementById("roxo").addEventListener("mouseenter", () => {
   document.getElementById("roxo").style.fill = "#5d02e0";
   document.getElementById("roxo").style.color = "#5d02e0";
 });
 
-document.getElementById("roxo").addEventListener("mouseleave", (_) => {
+document.getElementById("roxo").addEventListener("mouseleave", () => {
   document.getElementById("roxo").style.fill = "rgba(255, 255, 255, 0.8)";
   document.getElementById("roxo").style.color = "rgba(255, 255, 255, 0.8)";
 });
@@ -54,33 +46,26 @@ if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
 function addAnimation() {
   scrollers.forEach((scroller) => {
     scroller.setAttribute("data-animated", true);
-
     const scrollerInner = scroller.querySelector(".scroller__inner");
     const scrollerContent = Array.from(scrollerInner.children);
     const initialContentLength = scrollerContent.length;
 
-    // Cloning the items to create a continuous loop
     scrollerContent.slice(0, initialContentLength).forEach((item) => {
       const duplicatedItem = item.cloneNode(true);
       duplicatedItem.setAttribute("aria-hidden", true);
       scrollerInner.appendChild(duplicatedItem);
     });
 
-    // Animation direction based on data-direction attribute
-    const direction = scroller.getAttribute("data-direction");
-    if (direction === "right") {
-      scroller.style.setProperty("--_animation-direction", "reverse");
-    } else {
-      scroller.style.setProperty("--_animation-direction", "forwards");
-    }
-
-    // Animation speed based on data-speed attribute
-    const speed = scroller.getAttribute("data-speed");
-    if (speed === "slow") {
-      scroller.style.setProperty("--_animation-duration", "60s");
-    } else {
-      scroller.style.setProperty("--_animation-duration", "20s");
-    }
+    scroller.style.setProperty(
+      "--_animation-direction",
+      scroller.getAttribute("data-direction") === "right"
+        ? "reverse"
+        : "forwards"
+    );
+    scroller.style.setProperty(
+      "--_animation-duration",
+      scroller.getAttribute("data-speed") === "slow" ? "60s" : "20s"
+    );
   });
 }
 
@@ -92,7 +77,6 @@ function applyHoverEffects(id) {
 
   element.addEventListener("mouseenter", () => {
     img.style = `
-      
       transition: all 0.3s;
       width: 358px;
       height: 738px;
@@ -106,14 +90,8 @@ function applyHoverEffects(id) {
     text.style = `
       transition: all 0.3s;
       color: #fa0444;
-      left:15%;
-
+      left: ${id === "lol" ? "20%" : id === "hok" ? "25%" : "15%"};
     `;
-    if (id === "lol") {
-      text.style.left = "20%";
-    } else if (id == "hok") {
-      text.style.left = "25%";
-    }
     svg.style.display = "block";
   });
 
@@ -131,21 +109,14 @@ function applyHoverEffects(id) {
     text.style = `
       transition: all 0.3s;
       color: #fff;
-      left:25%;
-
+      left: ${id === "lol" ? "35%" : id === "hok" ? "40%" : "25%"};
     `;
-    if (id === "lol") {
-      text.style.left = "35%";
-    } else if (id == "hok") {
-      text.style.left = "40%";
-    }
     svg.style.display = "none";
   });
 }
 
 function createSVG(id) {
   const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-  svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
   svg.setAttribute("width", "50");
   svg.setAttribute("height", "50");
   svg.setAttribute("viewBox", "0 0 39 39");
@@ -168,12 +139,13 @@ const ids = ["r6", "cs", "ff", "lol", "hok"];
 ids.forEach(applyHoverEffects);
 
 gsap.registerPlugin(ScrollTrigger);
-document.addEventListener("DOMContentLoaded", (event) => {
+document.addEventListener("DOMContentLoaded", () => {
   const cards = [
     { id: "#mlks-1", endTranslateX: 0, rotate: 45 },
     { id: "#mlks-2", endTranslateX: -100, rotate: -30 },
     { id: "#mlks-3", endTranslateX: -50, rotate: 45 },
   ];
+
   ScrollTrigger.create({
     trigger: ".fenosmlks",
     start: "top top",
@@ -191,7 +163,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   cards.forEach((card) => {
     ScrollTrigger.create({
-      trigger: "card.id",
+      trigger: card.id,
       start: "+=1700vh",
       end: "+=1700vh",
       scrub: 1,
