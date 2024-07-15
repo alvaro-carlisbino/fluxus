@@ -278,7 +278,7 @@ body {
 
 .fenosmlks {
   width: 1500vh;
-  margin-top: 20rem;
+  margin-top: 50rem;
   margin-left: 20rem;
   font-weight: bold;
 }
@@ -293,9 +293,7 @@ body {
 #gif_fluxo {
   width: 690px;
   height: 620px;
-  border-left: 1px white solid;
-  border-right: 1px white solid;
-  border-bottom: 1px white solid;
+  border: 1px white solid;
 }
 
 #div-seglin {
@@ -305,16 +303,11 @@ body {
 }
 
 #tenm {
-  color: #5d02e0
+  color: #5d02e0;
 }
 
 .nmr-red {
-  color: #fa0444
-}
-
-.noticias-container{
-  margin-top: 20rem;
-  margin-bottom: 20rem;
+  color: #fa0444;
 }
 
 .noticias {
@@ -323,6 +316,8 @@ body {
   font-weight: 500;
   color: #fff;
   margin-left: 5rem;
+  left: 0%;
+  position: absolute;
 }
 
 #posptr {
@@ -330,4 +325,36 @@ body {
   font-family: Montserrat;
   font-weight: 400;
   word-wrap: break-word;
+}
+
+.onde-o-jogo-vira {
+  font-size: 40px;
+  font-family: Montserrat;
+  letter-spacing: 30px;
+  font-weight: 300;
+  color: #fff;
+  position: absolute;
+  right: 3%;
+  margin-top: 20vw;
+}
+
+.jogo-vira {
+  font-size: 40px;
+  font-family: Montserrat;
+  letter-spacing: 25px;
+  font-weight: 300;
+  color: #fff;
+  position: absolute;
+  right: 3%;
+  margin-top: 25vw;
+}
+
+.square {
+  width: 700px;
+  height: 500px;
+  border: 1px white solid;
+  position: relative;
+  top: 52rem;
+  left: 9.5%;
+  margin: 20px;
 }
