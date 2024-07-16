@@ -303,7 +303,7 @@ body {
 }
 
 .tenm {
-  color: #5d02e0
+  color: #5d02e0;
 }
 
 .nmr-red {
@@ -330,7 +330,7 @@ body {
 #fenos {
   font-size: 400px;
   color: #fff;
-  font-weight: 700
+  font-weight: 700;
 }
 .onde-o-jogo-vira {
   font-size: 40px;
@@ -362,4 +362,54 @@ body {
   top: 52rem;
   left: 9.5%;
   margin: 20px;
+  padding: 0;
+}
+
+#noticia_1 {
+  background-image: url("../assets/noticias_1.svg");
+  background-size: cover;
+  -webkit-box-shadow: inset -1px -86px 33px -8px rgba(0, 0, 0, 0.64);
+  -moz-box-shadow: inset -1px -86px 33px -8px rgba(0, 0, 0, 0.64);
+  box-shadow: inset -1px -86px 33px -8px rgba(0, 0, 0, 0.64);
+}
+
+.btn:link,
+.btn:visited {
+ text-transform: uppercase;
+ text-decoration: none;
+ color: rgb(27, 27, 27);
+ padding: 10px 30px;
+ border: 1px solid;
+ border-radius: 1000px;
+ display: inline-block;
+ transition: all .2s;
+ position: relative;
+}
+
+.btn:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 10px 20px rgba(27, 27, 27, .5);
+}
+
+.btn:active {
+ transform: translateY(-3px);
+}
+
+.btn::after {
+ content: "";
+ display: inline-block;
+ height: 100%;
+ width: 100%;
+ border-radius: 100px;
+ top: 0;
+ left: 0;
+ position: absolute;
+ z-index: -1;
+ transition: all .3s;
+}
+
+.btn:hover::after {
+ background-color: rgb(0, 238, 255);
+ transform: scaleX(1.4) scaleY(1.5);
+ opacity: 0;
 }
