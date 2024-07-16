@@ -298,13 +298,13 @@ body {
   border-bottom: 1px white solid;
 }
 
-#div-seglin {
+.div-seglin {
   width: 1500vh;
   height: 207px;
   position: relative;
 }
 
-#tenm {
+.tenm {
   color: #5d02e0
 }
 
@@ -330,4 +330,10 @@ body {
   font-family: Montserrat;
   font-weight: 400;
   word-wrap: break-word;
+}
+
+#fenos {
+  font-size: 400px;
+  color: #fff;
+  font-weight: 700
 }
