@@ -5,6 +5,10 @@
   --font-family: Montserrat, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 hr {
   color: gray;
   margin: 0;
