@@ -128,101 +128,347 @@
       </div>
     </div>
 
-    <div class="container mt-5">
-      <span class="noticias">NOTÍCIAS</span>
-      <div id="onde-o-jogo-vira">
-        <span class="onde-o-jogo-vira">ONDE</span>
-        <span class="jogo-vira">O JOGO VIRA</span>
+    <div
+      style="
+        width: 100vh;
+        height: 500px;
+        margin-left: 5rem;
+        margin-top: 30rem;
+        position: relative;
+      "
+    >
+      <div
+        style="
+          width: 1693px;
+          height: 338px;
+          left: 0px;
+          top: 0px;
+          position: absolute;
+        "
+      >
+        <div
+          style="
+            width: 816px;
+            left: 1000px;
+            top: 164px;
+            position: absolute;
+            text-align: right;
+          "
+        >
+          <span
+            style="
+              color: white;
+              font-size: 38px;
+              font-family: Montserrat;
+              font-weight: 500;
+              line-height: 87px;
+              letter-spacing: 41.76px;
+              word-wrap: break-word;
+            "
+            >ONDE<br /></span
+          ><span
+            style="
+              color: white;
+              font-size: 38px;
+              font-family: Montserrat;
+              font-weight: 500;
+              line-height: 87px;
+              word-wrap: break-word;
+            "
+            >O</span
+          ><span
+            style="
+              color: white;
+              font-size: 38px;
+              font-family: Montserrat;
+              font-weight: 500;
+              line-height: 87px;
+              letter-spacing: 41.76px;
+              word-wrap: break-word;
+            "
+          >
+            JOGOVIRA</span
+          >
+        </div>
+        <div
+          style="
+            left: 0px;
+            top: 0px;
+            position: absolute;
+            color: white;
+            font-size: 58px;
+            font-family: Montserrat;
+            font-weight: 700;
+            word-wrap: break-word;
+          "
+        >
+          NOTÍCIAS
+        </div>
       </div>
-
-      <div class="d-flex justify-content-between align-items-end mt-3">
-        <div class="square draggable" id="noticia_1">
-          <span class="tit_n">FREE-FIRE </span>
-          <span class="data_n">10/07/2024 </span>
-          <span class="ntc_bdy"
-            >Obrigado Twobarão!<br />Sentiremos falta 💜</span
-          >
-          <button
-            class="justify-content-center btn"
+      <div
+        id="noticias-div"
+        style="
+          width: 100vw;
+          height: 730px;
+          overflow-y: hidden;
+          overflow-x: scroll;
+          position: relative;
+          top: 23rem;
+        "
+      >
+        <div
+          style="
+            width: 1944px;
+            height: 730px;
+            position: absolute;
+            display: flex;
+          "
+        >
+          <div
             style="
-              position: absolute;
-              color: #fff;
-              font-family: var(--font-family);
-              width: 160px;
-              height: 40px;
-              border: 2px white solid;
-              border-radius: 20px;
-              bottom: 0%;
-              margin-bottom: 3rem;
-              margin-left: 24px;
+              width: 972px;
+              margin-right: 50px;
+              height: 730px;
+              position: relative;
+              flex-shrink: 0;
             "
           >
-            Leia mais
             <img
-              src="assets/flecha_cima.svg"
-              width="10px"
-              height="10px"
-              class="img_n"
+              style="
+                width: 972px;
+                height: 730px;
+                position: absolute;
+                border: 1px solid;
+              "
+              src="assets/noticias_1.svg"
             />
-          </button>
-        </div>
-        <div class="square draggable" id="noticia_2">
-          <span class="tit_n">CS-2 </span>
-          <span class="data_n">10/07/2024 </span>
-          <span class="ntc_bdy">Fluxo anuncia<br />coleção com Kappa</span>
-          <button
-            class="justify-content-center btn btn_n"
+            <div
+              style="
+                width: 969px;
+                height: 729px;
+                position: absolute;
+                background: linear-gradient(
+                  180deg,
+                  rgba(0, 0, 0, 0) 54%,
+                  black 100%
+                );
+              "
+            ></div>
+            <div
+              style="
+                width: 493px;
+                height: 96px;
+                position: absolute;
+                color: white;
+                font-size: 45px;
+                font-family: Montserrat;
+                font-weight: 600;
+                line-height: 49.5px;
+                word-wrap: break-word;
+                left: 47px;
+                top: 472px;
+              "
+            >
+              Obrigado Twobarão!<br />Sentiremos falta 💜
+            </div>
+            <div
+              style="
+                width: 114px;
+                height: 16px;
+                position: absolute;
+                transform: rotate(90deg);
+                transform-origin: 0 0;
+                color: white;
+                font-size: 18px;
+                font-family: Montserrat;
+                font-weight: 500;
+                line-height: 16.74px;
+                letter-spacing: 1.44px;
+                word-wrap: break-word;
+                left: 926px;
+                top: 35px;
+              "
+            >
+              10/07/2024
+            </div>
+            <div
+              style="
+                width: 191px;
+                height: 40px;
+                position: absolute;
+                color: white;
+                font-size: 33px;
+                font-family: Montserrat;
+                font-weight: 400;
+                text-decoration: underline;
+                text-transform: uppercase;
+                word-wrap: break-word;
+                left: 47px;
+                top: 35px;
+              "
+            >
+              Free-Fire
+            </div>
+            <div
+              style="
+                width: 271px;
+                height: 80px;
+                position: absolute;
+                border-radius: 47px;
+                border: 1px white solid;
+                left: 47px;
+                top: 590px;
+              "
+            ></div>
+            <div
+              style="
+                width: 22px;
+                height: 22px;
+                position: absolute;
+                background: white;
+                left: 259px;
+                top: 620px;
+              "
+            ></div>
+            <div
+              style="
+                width: 153px;
+                height: 33px;
+                position: absolute;
+                color: white;
+                font-size: 32px;
+                font-family: Montserrat;
+                font-weight: 500;
+                word-wrap: break-word;
+                left: 85px;
+                top: 611px;
+              "
+            >
+              Leia mais
+            </div>
+          </div>
+          <div
             style="
-              position: absolute;
-              color: #fff;
-              font-family: var(--font-family);
-              width: 160px;
-              height: 40px;
-              border: 2px white solid;
-              border-radius: 20px;
-              bottom: 0%;
-              margin-bottom: 3rem;
-              margin-left: 24px;
+              width: 972px;
+              height: 730px;
+              position: relative;
+              flex-shrink: 0;
             "
           >
-            Leia mais
             <img
-              src="assets/flecha_cima.svg"
-              width="10px"
-              height="10px"
-              class="img_n"
+              style="
+                width: 972px;
+                height: 730px;
+                position: absolute;
+                border: 1px solid;
+              "
+              src="assets/noticias_2.svg"
             />
-          </button>
-        </div>
-        <div class="square draggable" id="noticia_1">
-          <span class="tit_n">FREE-FIRE</span>
-          <span class="data_n">10/07/2024</span>
-          <span class="ntc_bdy"
-            >Obrigado Twobarão!<br />Sentiremos falta 💜</span
-          >
-          <button
-            class="justify-content-center btn"
-            style="
-              position: absolute;
-              color: #fff;
-              font-family: var(--font-family);
-              width: 160px;
-              height: 40px;
-              border: 2px white solid;
-              border-radius: 20px;
-              bottom: 0%;
-              margin-bottom: 3rem;
-              margin-left: 24px;
-            "
-          >
-            Leia mais
-            <img
-              src="assets/flecha_cima.svg"
-              width="10px"
-              height="10px"
-              class="img_n"
-            />
-          </button>
+            <div
+              style="
+                width: 969px;
+                height: 729px;
+                position: absolute;
+                background: linear-gradient(
+                  180deg,
+                  rgba(0, 0, 0, 0) 54%,
+                  black 100%
+                );
+              "
+            ></div>
+            <div
+              style="
+                width: 493px;
+                height: 96px;
+                position: absolute;
+                color: white;
+                font-size: 45px;
+                font-family: Montserrat;
+                font-weight: 600;
+                line-height: 49.5px;
+                word-wrap: break-word;
+                left: 47px;
+                top: 472px;
+              "
+            >
+              Fluxo anuncia coleção com Kappa
+            </div>
+            <div
+              style="
+                width: 114px;
+                height: 16px;
+                position: absolute;
+                transform: rotate(90deg);
+                transform-origin: 0 0;
+                color: white;
+                font-size: 18px;
+                font-family: Montserrat;
+                font-weight: 500;
+                line-height: 16.74px;
+                letter-spacing: 1.44px;
+                word-wrap: break-word;
+                left: 926px;
+                top: 35px;
+              "
+            >
+              10/07/2024
+            </div>
+            <div
+              style="
+                width: 83px;
+                height: 40px;
+                position: absolute;
+                color: white;
+                font-size: 33px;
+                font-family: Montserrat;
+                font-weight: 400;
+                text-decoration: underline;
+                text-transform: uppercase;
+                word-wrap: break-word;
+                left: 47px;
+                top: 35px;
+              "
+            >
+              CS-2
+            </div>
+            <div
+              style="
+                width: 271px;
+                height: 80px;
+                position: absolute;
+                border-radius: 47px;
+                border: 1px white solid;
+                left: 47px;
+                top: 590px;
+              "
+            ></div>
+            <div
+              style="
+                width: 22px;
+                height: 22px;
+                position: absolute;
+                background: white;
+                left: 259px;
+                top: 620px;
+              "
+            ></div>
+            <div
+              style="
+                width: 153px;
+                height: 33px;
+                position: absolute;
+                color: white;
+                font-size: 32px;
+                font-family: Montserrat;
+                font-weight: 500;
+                word-wrap: break-word;
+                left: 85px;
+                top: 611px;
+              "
+            >
+              Leia mais
+            </div>
+          </div>
         </div>
       </div>
     </div>
