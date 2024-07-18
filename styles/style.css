@@ -303,6 +303,7 @@ body {
 #gif_fluxo {
   width: 690px;
   height: 620px;
+  object-fit: cover; 
   border: 1px white solid;
 }
 
@@ -1064,4 +1065,22 @@ body {
   font-weight: 500;
   letter-spacing: 4.16px;
   word-wrap: break-word;
+}
+
+[data-anim] {
+  opacity: 0;
+  transition: .3s;
+}
+
+[data-anim="left"]{
+  transform: translate3d(-50px, 0, 0);
+}
+
+[data-anim="right"]{
+  transform: translate3d(50px, 0, 0);
+}
+
+[data-anim].animate {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
 }
