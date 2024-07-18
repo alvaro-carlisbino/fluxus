@@ -102,7 +102,12 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 0px;
+}
+
+#noticias-div::-webkit-scrollbar {
+  width: 0px;
+  display: none;
 }
 
 ::-webkit-scrollbar-track {
