@@ -488,6 +488,15 @@ body {
     brightness(104%) contrast(103%);
 }
 
+#pos_ntc {
+  width: 1906px;
+  height: 1150px;
+  position: relative;
+  margin-top: 65rem;
+  margin-left: 5rem;
+  overflow: auto;
+}
+
 #prestore {
   width: 1018px;
   height: 134px;
@@ -550,5 +559,504 @@ body {
   font-family: Montserrat;
   font-weight: 500;
   text-decoration: underline;
+  word-wrap: break-word;
+}
+
+#str_border_1 {
+  width: 635px;
+  height: 947px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  border-top: 1px #353535 solid;
+  border-right: 1px #353535 solid;
+}
+
+#str_prdct_1 {
+  width: 297px;
+  height: 52px;
+  left: 0px;
+  top: 38px;
+  position: absolute;
+  color: white;
+  font-size: 25px;
+  font-family: Montserrat;
+  font-weight: 600;
+  line-height: 26.5px;
+  word-wrap: break-word;
+}
+
+#str_newps_1 {
+  width: 161px;
+  height: 55px;
+  left: 443px;
+  top: 37px;
+  position: absolute;
+}
+
+.new_brdr {
+  width: 161px;
+  height: 55px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  border: 1px white solid;
+}
+
+.neww {
+  width: 84px;
+  height: 21px;
+  left: 39px;
+  top: 16px;
+  position: absolute;
+  color: #fa0444;
+  font-size: 25px;
+  font-family: Montserrat;
+  font-weight: 600;
+  line-height: 26.5px;
+  word-wrap: break-word;
+}
+
+#pos_str_3 {
+  width: 1130px;
+  height: 947px;
+  left: 479px;
+  top: 0px;
+  position: absolute;
+}
+
+#img_str_2 {
+  width: 634.94px;
+  height: 720.78px;
+  left: 157.12px;
+  top: 125.81px;
+  position: absolute;
+}
+
+#str_border_2 {
+  width: 635px;
+  height: 947px;
+  left: 156px;
+  top: 0px;
+  position: absolute;
+  border-top: 1px #353535 solid;
+  border-right: 1px #353535 solid;
+}
+
+#str_prdct_2 {
+  width: 297px;
+  height: 52px;
+  left: 171px;
+  top: 39px;
+  position: absolute;
+  color: white;
+  font-size: 25px;
+  font-family: Montserrat;
+  font-weight: 600;
+  line-height: 26.5px;
+  word-wrap: break-word;
+}
+
+#str_newps_2 {
+  width: 161px;
+  height: 55px;
+  left: 614px;
+  top: 38px;
+  position: absolute;
+}
+
+#str_buy_2 {
+  width: 297px;
+  height: 33px;
+  left: 171px;
+  top: 881px;
+  position: absolute;
+  color: white;
+  font-size: 32px;
+  font-family: Montserrat;
+  font-weight: 500;
+  text-decoration: underline;
+  word-wrap: break-word;
+}
+
+#str_price_1 {
+  width: 138px;
+  height: 33px;
+  left: 0px;
+  top: 887px;
+  position: absolute;
+  color: white;
+  font-size: 28px;
+  font-family: Montserrat;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+#str_price_2 {
+  width: 138px;
+  height: 33px;
+  left: 637px;
+  top: 885px;
+  position: absolute;
+  color: white;
+  font-size: 28px;
+  font-family: Montserrat;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+#str_buy_3 {
+  width: 322px;
+  height: 33px;
+  left: 808px;
+  top: 880px;
+  position: absolute;
+  color: white;
+  font-size: 32px;
+  font-family: Montserrat;
+  font-weight: 500;
+  text-decoration: underline;
+  word-wrap: break-word;
+}
+
+#pos_str_4 {
+  width: 634.94px;
+  height: 846.59px;
+  left: 1271.06px;
+  top: 0px;
+  position: absolute;
+}
+
+#img_str_3 {
+  width: 634.94px;
+  height: 720.78px;
+  left: 0px;
+  top: 125.81px;
+  position: absolute;
+  margin: 0;
+}
+
+#str_border_3 {
+  width: 634.94px;
+  height: 846.59px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  border-top: 1px #353535 solid;
+  border-right: 1px #353535 solid;
+}
+
+#str_prdct_3 {
+  width: 297px;
+  height: 52px;
+  left: 15.94px;
+  top: 40px;
+  position: absolute;
+  color: white;
+  font-size: 25px;
+  font-family: Montserrat;
+  font-weight: 600;
+  line-height: 26.5px;
+  word-wrap: break-word;
+}
+
+#str_newps_3 {
+  width: 161px;
+  height: 55px;
+  left: 458.94px;
+  top: 39px;
+  position: absolute;
+}
+
+#footer_lines_1 {
+  width: 588px;
+  height: 617px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  border: 1px #353535 solid;
+}
+
+#footer_lines_2 {
+  width: 1333px;
+  height: 308px;
+  left: 587px;
+  top: 0px;
+  position: absolute;
+  border: 1px #353535 solid;
+}
+
+#footer_pp {
+  left: 657px;
+  top: 42px;
+  position: absolute;
+  color: white;
+  font-size: 31px;
+  font-family: Montserrat;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+#footer_home {
+  left: 1262px;
+  top: 42px;
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  font-family: Montserrat;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+#footer_ig {
+  left: 1682px;
+  top: 42px;
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  font-family: Montserrat;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+#footer_tktk {
+  left: 1682px;
+  top: 96px;
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  font-family: Montserrat;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+#footer_yt {
+  left: 1682px;
+  top: 150px;
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  font-family: Montserrat;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+#footer_x {
+  left: 1682px;
+  top: 204px;
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  font-family: Montserrat;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+#footer_loja {
+  left: 1262px;
+  top: 96px;
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  font-family: Montserrat;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+#footer_pf {
+  left: 657px;
+  top: 152px;
+  position: absolute;
+  color: white;
+  font-size: 31px;
+  font-family: Montserrat;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+#footer_pr {
+  left: 657px;
+  top: 97px;
+  position: absolute;
+  color: white;
+  font-size: 31px;
+  font-family: Montserrat;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+#footer_align {
+  width: 1334px;
+  height: 277px;
+  left: 587px;
+  top: 340px;
+  position: absolute;
+}
+
+#sub_align_1 {
+  width: 1334px;
+  height: 277px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  border-bottom: 1px #353535 solid;
+}
+
+#sub_align_2 {
+  width: 1117px;
+  height: 187px;
+  left: 163px;
+  top: 8px;
+  position: absolute;
+}
+
+#sub_align_3 {
+  width: 1117px;
+  height: 154px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+}
+
+#footer_segue {
+  color: white;
+  font-size: 200px;
+  font-family: League Gothic;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+#footer_fluxo {
+  color: #fa0444;
+  font-size: 200px;
+  font-family: League Gothic;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+#footer_fx {
+  width: 140px;
+  height: 140px;
+  left: 865px;
+  top: 47px;
+  position: absolute;
+  border-radius: 9999px;
+  border: 7px #5d02e0 solid;
+}
+
+#footer_fx_aln_1 {
+  width: 90.05px;
+  height: 84.37px;
+  left: 890px;
+  top: 75px;
+  position: absolute;
+}
+
+#footer_fx_aln_2 {
+  width: 66.64px;
+  height: 84.37px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+}
+
+#footer_bx1 {
+  width: 477px;
+  height: 57px;
+  left: 55px;
+  top: 150px;
+  position: absolute;
+  border: 1px white solid;
+}
+
+#footer_bx2 {
+  width: 477px;
+  height: 56px;
+  left: 55px;
+  top: 235px;
+  position: absolute;
+  border: 1px white solid;
+}
+
+#footer_bx3 {
+  width: 477px;
+  height: 56px;
+  left: 55px;
+  top: 320px;
+  position: absolute;
+  border: 1px white solid;
+}
+
+#footer_btn_aln {
+  width: 385px;
+  height: 77px;
+  left: 101px;
+  top: 435px;
+  position: absolute;
+}
+
+#footer_btn {
+  width: 385px;
+  height: 77px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  border-radius: 60px;
+  border: 1px #fa0444 solid;
+}
+
+#footer_btn_enviar {
+  left: 133px;
+  top: 20px;
+  position: absolute;
+  color: #fa0444;
+  font-size: 30px;
+  font-family: Montserrat;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+#insert_name {
+  left: 71px;
+  top: 167px;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  font-family: Montserrat;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+#insert_email {
+  left: 71px;
+  top: 251px;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  font-family: Montserrat;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+#insert_mensagem {
+  left: 71px;
+  top: 336px;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  font-family: Montserrat;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+#tit_insert {
+  left: 55px;
+  top: 50px;
+  position: absolute;
+  color: white;
+  font-size: 32px;
+  font-family: Montserrat;
+  font-weight: 500;
+  letter-spacing: 4.16px;
   word-wrap: break-word;
 }
