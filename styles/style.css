@@ -105,6 +105,11 @@ body {
   width: 0px;
 }
 
+#noticias-div {
+  
+  cursor: pointer;
+}
+
 #noticias-div::-webkit-scrollbar {
   width: 0px;
   display: none;
